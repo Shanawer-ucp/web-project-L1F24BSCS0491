@@ -5,6 +5,7 @@ body {
   background-image: url("images/bg-pattern.svg");
   color: #3b2a20;
   line-height: 1.6;
+  
 }
 h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; }
 h2 { font-size: 34px; margin-top: 0; }
