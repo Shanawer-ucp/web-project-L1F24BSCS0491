@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background-color: #f1ecf7;
+}
+
+/* ---------- navbar (different style on this page: vertical-ish pills with underline) ---------- */
+.navbar { background-color: #4b2e83; padding: 10px; text-align: right; }
+.navbar a { color: #fff; text-decoration: none; margin-left: 15px; padding-bottom: 3px; }
+.navbar a:hover { border-bottom: 3px solid #ffd54f; }
+
+main { width: 90%; max-width: 600px; margin: 20px auto; }
+
+/* ---------- combinators ---------- */
+form fieldset { margin-bottom: 20px; border: 2px solid #4b2e83; }   /* descendant */
+form > fieldset { background-color: #ffffff; }                      /* child */
+label + input, label + select, label + textarea { margin-bottom: 12px; } /* adjacent sibling */
+h2 ~ p { color: #555; }                                             /* general sibling */
+
+label { display: block; margin-top: 8px; font-weight: bold; }
+label.inline { display: inline; font-weight: normal; margin-right: 12px; }
+
+/* ---------- attribute selectors ---------- */
+input[type="text"], input[type="password"], input[type="email"],
+input[type="url"], input[type="date"], input[type="time"],
+input[type="number"], select, textarea {
+  display: block; width: 100%; padding: 8px; border: 2px solid #aaa; border-radius: 6px;
+}
+input[type="color"] { display: block; }
+input[readonly] { background-color: #eee; }
+input[disabled] { background-color: #ddd; color: #888; }
+input[required] { border-left: 5px solid #e53935; }
+
+/* ---------- pseudo-classes ---------- */
+input:focus, select:focus, textarea:focus { outline: none; border-color: #4b2e83; background-color: #f7f2ff; }
+input:valid { border-color: #2e7d32; }
+input:invalid { border-color: #c62828; }
+button:hover { background-color: #ffd54f; color: #000; }
+input:checked + label { color: #4b2e83; font-weight: bold; }
+
+/* ---------- pseudo-elements ---------- */
+.intro::first-letter { font-size: 28px; color: #4b2e83; }
+label[for="name"]::after, label[for="email"]::after, label[for="pass"]::after { content: " *"; color: red; }
+legend::before { content: "\2615  "; }
+::placeholder { color: #999; font-style: italic; }
+::selection { background-color: #ffd54f; }
+
+button {
+  background-color: #4b2e83; color: #fff; border: none;
+  padding: 12px 30px; font-size: 16px; border-radius: 6px; cursor: pointer;
+}
