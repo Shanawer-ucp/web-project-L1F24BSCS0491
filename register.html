@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brew &amp; Bite Cafe | Register</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="media.html">Media</a>
+    <a href="register.html">Register</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <h2>Join Our Cafe Club</h2>
+    <p class="intro">Fill this form to become a member and get special offers.</p>
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Details</legend>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required minlength="3" maxlength="30">
+
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pass" required minlength="6">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob">
+
+        <label for="site">Website</label>
+        <input type="url" id="site" name="site" placeholder="https://example.com">
+
+        <label for="id">Member ID (readonly)</label>
+        <input type="text" id="id" name="id" value="CLUB-001" readonly>
+
+        <label for="old">Old Card (disabled)</label>
+        <input type="text" id="old" name="old" value="Not available" disabled>
+      </fieldset>
+
+      <fieldset>
+        <legend>Cafe Preferences</legend>
+
+        <label for="color">Favourite Colour</label>
+        <input type="color" id="color" name="color" value="#6f4e37">
+
+        <label for="cups">Cups per week</label>
+        <input type="number" id="cups" name="cups" min="1" max="20" value="3">
+
+        <label for="time">Visit Time</label>
+        <input type="time" id="time" name="time">
+
+        <label for="mood">Coffee Strength</label>
+        <input type="range" id="mood" name="mood" min="1" max="10" value="5">
+
+        <label for="drink">Favourite Drink</label>
+        <select id="drink" name="drink">
+          <option value="latte">Latte</option>
+          <option value="cappuccino" selected>Cappuccino</option>
+          <option value="mocha">Mocha</option>
+        </select>
+
+        <label for="photo">Upload Photo</label>
+        <input type="file" id="photo" name="photo">
+
+        <p>Gender:</p>
+        <input type="radio" id="m" name="gender" value="male" checked>
+        <label for="m" class="inline">Male</label>
+        <input type="radio" id="f" name="gender" value="female">
+        <label for="f" class="inline">Female</label>
+
+        <p>Interests:</p>
+        <input type="checkbox" id="c1" name="interest" value="coffee" checked>
+        <label for="c1" class="inline">Coffee</label>
+        <input type="checkbox" id="c2" name="interest" value="dessert">
+        <label for="c2" class="inline">Dessert</label>
+
+        <label for="msg">Message</label>
+        <textarea id="msg" name="msg" rows="4" maxlength="200" placeholder="Anything you want to tell us?"></textarea>
+      </fieldset>
+
+      <button type="submit">Register</button>
+    </form>
+  </main>
+
+</body>
+</html>
